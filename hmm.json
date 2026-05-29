@@ -16,19 +16,14 @@
       },
       {
          "name": "openfl",
-         "type": "git",
-         "dir": null,
-         "ref": "74d8f72890b9ae70bba589d034ea35b86588e548",
-         "url": "https://github.com/T5mpler/openfl-dnb"
+         "type": "haxelib",
+         "version": "9.3.3"
       },
       {
          "name": "lime",
-         "type": "git",
-         "dir": null,
-         "ref": "main",
-         "url": "https://github.com/QQQEB159/lime-8.2.2"
+         "type": "haxelib",
+         "version": "8.2.2"
       },
-
       {
          "name": "hxvlc",
          "type": "haxelib",
