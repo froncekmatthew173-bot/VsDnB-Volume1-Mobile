@@ -59,6 +59,31 @@ jobs:
           $haxePath = Split-Path (Get-Command haxe).Source
           "HAXEPATH=$haxePath" | Out-File -FilePath $env:GITHUB_ENV -Append
           haxelib setup C:\haxelib
+
+          $libs = @(
+            "openfl",
+            "lime",
+            "polymod",
+            "hxcpp",
+            "flixel",
+            "flixel-addons",
+            "flixel-animate",
+            "hscript",
+            "json2object",
+            "jsonpatch",
+            "jsonpath",
+            "funkin.vis",
+            "grig.audio",
+            "thx.core"
+          )
+
+          foreach ($lib in $libs) {
+            $path = "C:\haxelib\$lib"
+            if (Test-Path $path) {
+              Remove-Item $path -Recurse -Force -ErrorAction SilentlyContinue
+            }
+          }
+
           haxelib install hmm --quiet
           haxelib run hmm install
 
