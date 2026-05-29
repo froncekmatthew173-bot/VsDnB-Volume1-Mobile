@@ -42,7 +42,6 @@ jobs:
         with:
           name: AndroidBuild
           path: export/release/android/bin/app/build/outputs/apk/release/*.apk
-
   buildWindows:
     name: Windows Build
     runs-on: windows-latest
@@ -54,15 +53,22 @@ jobs:
         with:
           haxe-version: 4.3.7
 
-      - name: Install Dependencies
-        shell: bash
+      - name: Export HAXEPATH
+        shell: pwsh
         run: |
-          haxelib install hmm
-          haxelib run hmm setup
-          hmm install
+          $haxePath = Split-Path (Get-Command haxe).Source
+          "HAXEPATH=$haxePath" | Out-File -FilePath $env:GITHUB_ENV -Append
+          "$haxePath" | Out-File -FilePath $env:GITHUB_PATH -Append
+          haxe --version
+
+      - name: Install Dependencies
+        shell: pwsh
+        run: |
+          haxelib install hmm --quiet
+          haxelib run hmm install
 
       - name: Build Windows
-        shell: bash
+        shell: pwsh
         run: |
           haxelib run lime build windows
 
