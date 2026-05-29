@@ -73,7 +73,7 @@
       {
          "name": "polymod",
          "type": "git",
-         "ref": "d2d73608e63cf8c6672a19568557fa0ab7882628",
+         "ref": "main",
          "url": "https://github.com/T5mpler/polymod-dnb.git"
       },
       {
