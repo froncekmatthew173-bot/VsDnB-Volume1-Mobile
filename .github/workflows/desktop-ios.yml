@@ -7,6 +7,9 @@ on:
   pull_request:
     branches: [main]
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   buildLinux:
     name: Linux Build
@@ -39,8 +42,10 @@ jobs:
 
       - name: Install Haxelib
         run: |
-          haxelib install hmm
-          haxelib run hmm setup
+          echo "HAXEPATH=$(dirname "$(which haxe)")" >> "$GITHUB_ENV"
+          export HAXEPATH="$(dirname "$(which haxe)")"
+          haxelib setup "$HOME/haxelib"
+          haxelib install hmm --quiet
           haxelib run hmm install
 
       - name: Compile Linux
@@ -70,8 +75,10 @@ jobs:
 
       - name: Install Haxelib
         run: |
-          haxelib install hmm
-          haxelib run hmm setup
+          echo "HAXEPATH=$(dirname "$(which haxe)")" >> "$GITHUB_ENV"
+          export HAXEPATH="$(dirname "$(which haxe)")"
+          haxelib setup "$HOME/haxelib"
+          haxelib install hmm --quiet
           haxelib run hmm install
 
       - name: Compile macOS
@@ -103,8 +110,10 @@ jobs:
 
       - name: Install Haxelib
         run: |
-          haxelib install hmm
-          haxelib run hmm setup
+          echo "HAXEPATH=$(dirname "$(which haxe)")" >> "$GITHUB_ENV"
+          export HAXEPATH="$(dirname "$(which haxe)")"
+          haxelib setup "$HOME/haxelib"
+          haxelib install hmm --quiet
           haxelib run hmm install
 
       - name: Compile iOS Project
@@ -139,15 +148,10 @@ jobs:
         run: |
           $haxePath = Split-Path (Get-Command haxe).Source
           "HAXEPATH=$haxePath" | Out-File -FilePath $env:GITHUB_ENV -Append
+          $env:HAXEPATH = $haxePath
+
           haxelib setup C:\haxelib
-          haxelib install hmm
-
-          try {
-            haxelib run hmm setup
-          } catch {
-            Write-Host "hmm setup failed; continuing with direct haxelib run hmm install"
-          }
-
+          haxelib install hmm --quiet
           haxelib run hmm install
 
       - name: Compile Windows
