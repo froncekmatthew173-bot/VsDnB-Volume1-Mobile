@@ -16,13 +16,13 @@
       "name": "flixel",
       "type": "git",
       "url": "https://github.com/T5mpler/flixel-dnb",
-      "ref": "main"
+      "ref": "dev"
     },
     {
       "name": "flixel-addons",
       "type": "git",
       "url": "https://github.com/T5mpler/flixel-addons-dnb",
-      "ref": "main"
+      "ref": "dev"
     },
     {
       "name": "hxcpp",
@@ -40,25 +40,25 @@
       "name": "hscript",
       "type": "git",
       "url": "https://github.com/T5mpler/hscript-dnb.git",
-      "ref": "main"
+      "ref": "funkin-dev"
     },
     {
       "name": "polymod",
       "type": "git",
       "url": "https://github.com/T5mpler/polymod-dnb.git",
-      "ref": "main"
+      "ref": "master"
     },
     {
       "name": "json2object",
       "type": "git",
       "url": "https://github.com/FunkinCrew/json2object",
-      "ref": "main"
+      "ref": "master"
     },
     {
       "name": "jsonpatch",
       "type": "git",
       "url": "https://github.com/EliteMasterEric/jsonpatch",
-      "ref": "main"
+      "ref": "master"
     },
     {
       "name": "jsonpath",
