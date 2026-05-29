@@ -10,7 +10,7 @@
       "name": "openfl",
       "type": "git",
       "url": "https://github.com/T5mpler/openfl-dnb",
-      "ref": "74d8f72890b9ae70bba589d034ea35b86588e548"
+      "ref": "master"
     },
     {
       "name": "flixel",
