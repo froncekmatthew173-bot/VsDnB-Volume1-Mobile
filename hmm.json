@@ -10,19 +10,19 @@
       "name": "openfl",
       "type": "git",
       "url": "https://github.com/T5mpler/openfl-dnb",
-      "ref": "74d8f72890b9ae70bba589d034ea35b86588e548"
+      "ref": "main"
     },
     {
       "name": "flixel",
       "type": "git",
       "url": "https://github.com/T5mpler/flixel-dnb",
-      "ref": "f2dc7ba3b7c3fc3fcb4991577571c3dfc4f51cae"
+      "ref": "main"
     },
     {
       "name": "flixel-addons",
       "type": "git",
       "url": "https://github.com/T5mpler/flixel-addons-dnb",
-      "ref": "75a25a3adfe6c50690444e3af54cc0ed341b3274"
+      "ref": "main"
     },
     {
       "name": "hxcpp",
@@ -34,37 +34,37 @@
       "name": "flixel-animate",
       "type": "git",
       "url": "https://github.com/MaybeMaru/flixel-animate.git",
-      "ref": "aae07578e60a83347e8189af1b312d69d05215b8"
+      "ref": "main"
     },
     {
       "name": "hscript",
       "type": "git",
       "url": "https://github.com/T5mpler/hscript-dnb.git",
-      "ref": "dfa1f291224942a585e412fd0a2d3b14e1370980"
+      "ref": "main"
     },
     {
       "name": "polymod",
       "type": "git",
       "url": "https://github.com/T5mpler/polymod-dnb.git",
-      "ref": "d2d73608e63cf8c6672a19568557fa0ab7882628"
+      "ref": "main"
     },
     {
       "name": "json2object",
       "type": "git",
       "url": "https://github.com/FunkinCrew/json2object",
-      "ref": "a8c26f18463c98da32f744c214fe02273e1823fa"
+      "ref": "main"
     },
     {
       "name": "jsonpatch",
       "type": "git",
       "url": "https://github.com/EliteMasterEric/jsonpatch",
-      "ref": "f9b83215acd586dc28754b4ae7f69d4c06c3b4d3"
+      "ref": "main"
     },
     {
       "name": "jsonpath",
       "type": "git",
       "url": "https://github.com/EliteMasterEric/jsonpath",
-      "ref": "7a24193717b36393458c15c0435bb7c4470ecdda"
+      "ref": "main"
     },
     {
       "name": "grig.audio",
