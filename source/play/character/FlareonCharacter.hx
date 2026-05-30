@@ -1,7 +1,7 @@
 package play.character;
 
 import backend.Conductor;
-import backend.Paths;
+import Paths;
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.util.FlxColor;
@@ -1009,14 +1009,12 @@ class FlareonCharacter extends Character
 
 	function updateDropShadowFrameInfo(spr:FlxSprite)
 	{
-		using StringTools;
-
 #if (!flash && sys)
 		if (spr.shader == null || spr.frame == null || !Std.isOfType(spr.shader, FlxRuntimeShader))
 			return;
 
 		var runtimeShader:FlxRuntimeShader = cast spr.shader;
-		runtimeShader.setFloatArray('uFrameBounds', [spr.frame.uv.x, spr.frame.uv.y, spr.frame.uv.width, spr.frame.uv.height]);
+		runtimeShader.setFloatArray('uFrameBounds', [spr.frame.uv.u, spr.frame.uv.v, spr.frame.uv.u2 - uv.u, spr.frame.uv.v2 - uv.v]);
 		runtimeShader.setFloat('angOffset', spr.frame.angle * (Math.PI / 180));
 		#end
 	}
